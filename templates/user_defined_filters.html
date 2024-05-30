@@ -1,0 +1,26 @@
+{% load  user_defined_filters  %}  <!-- to use user defined filters in our frontend we need to load the filetr first % load userdefinedfilters file name created under templatetags package %-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>USER DEFINED FILTERS IN FORMS</title>
+</head>
+<body>
+    <center>
+        <!-- FILTERS ARE USED IN FORMS TO PERFORM SOME 
+        OPERATIONS ON THE DATA WE ARE GETTING FROM BACKEND 
+        TO DISPLAY FILTERED DATA IN FRONTEND FILTERS ARE REPRESENTED BY | (PARELLEL PIPE SYMBOL)
+        
+        FOR A USER DEFINED FUNCTION ACCEPTING MORE THAN 1 ARGUMENT YOU SHOULD PROVIDE THAT ARGUMENT AS FILTER'S ARGUMENT
+         
+    -->
+        <h1>USER DEFINED FILTERS IN FORMS</h1>
+        <h2>{{data}}</h2>
+        <h4>using our userdefined filter swapcase in order to swap the respective case ----> {{data|swapcase}}</h4>
+        <h4>using our userdefined filter remove in order to remove a specific character ----> {{data|remove:'H'}}</h4>
+
+    </center>
+</body>
+</html>
+    

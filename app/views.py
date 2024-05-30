@@ -1,9 +1,11 @@
 from django.shortcuts import render
-import datetime
+import datetime                #for using date built in filter we need to import datetime
 
-# Create your views here.
+
 
 # function for testing builtin filters
+
+
 
 def builtin_filters(request):
     da=datetime.datetime.now()
@@ -12,3 +14,13 @@ def builtin_filters(request):
     d={'data':'Hi HoW ARe You','da':da,'c':0,'m':1,'mco':3,"da":da}     # now showing 2 cats 
 
     return render(request,'builtin_filters.html',d)
+
+
+
+
+# function for testing builtin filters
+
+
+def user_defined_filters(request):
+    d={'data':'Hi HoW ARe You'}
+    return render(request,'user_defined_filters.html',d)
