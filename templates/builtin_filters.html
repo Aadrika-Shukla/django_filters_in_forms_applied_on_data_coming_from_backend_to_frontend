@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <!-- FILTERS ARE USED IN FORMS TO PERFORM SOME 
+        OPERATIONS ON THE DATA WE ARE GETTING FROM BACKEND 
+        TO DISPLAY FILTERED DATA IN FRONTEND FILTERS ARE REPRESENTED BY | (PARELLEL PIPE SYMBOL)
+
+        FOR TRUNCATE CHARS IT WILL DISPLAY ARGUMENT -1  CHARS and then ...
+        where as in slice it will show chars = argument pass without ... symbol
+
+        fOR DATE FILTER WE NEED TO IMPORT DATETIME IN VIEWS--### IMPORT DATETIME
+        AND THE ARUMENT WE ARE PASING IS THE FORMAT IN WHCH WE WANT TO DISPLAY THE DATA
+         
+    -->
+        <h1>BUILT IN FILTERS IN FORMS</h1>
+        <h2>{{data}}</h2>
+        <h4>in upper case-->{{data|upper}}</h4>
+        <h4>in lower case-->{{data|lower}}</h4>
+        <h4>in capfirst case-->{{data|capfirst}}</h4>
+        <h4>in title case-->{{data|title}}</h4>
+        <h4>in truncatecharacters case-->{{data|truncatechars:'5'}}</h4>
+        <h4>in truncatewords case-->{{data|truncatewords:'2'}}</h4>
+        <h4>in slice case-->{{data|slice:'2'}}</h4>
+        <h4>in date format to display date and year-->{{da|date:'m Y'}}</h4>
+        <h4>in length format to display length of string case-->{{data|length}}</h4>
+        <h4>in pluralize case with count 2-->I have {{c}} cat{{c|pluralize}}</h4>   <!--  # here cat count is 2-->
+        <h4>in pluralize case with count 0-->I have {{c}} cat{{c|pluralize}}</h4>   <!--  # here cat count is 0-->
+        <h4>in pluralize case with count 1-->I have {{m}} mango{{m|pluralize}}</h4> <!--- # here count is 1 for mango  #### by default for pluralize it adds s for any other plural form you need to give that as arguments in form of string to pluralize function name-->
+        <h4>in pluralize case with count 3-->I have {{mco}} mango{{mco|pluralize:'es'}}</h4>   <!-- according to cunt dynamically it pluralize it for some specfic pluarl form we give it as es   # here mangoes as count of mangoes is 3 here-->
+
+
+    </center>
+
+</body>
+</html>
